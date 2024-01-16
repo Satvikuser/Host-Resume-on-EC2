@@ -29,14 +29,10 @@ jobs:
           host: ${{ secrets.HOST_DNS }}
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
-      - name: Run Command
-        run: |
-         pwd
-         ls -la
-         cd /home
-         ls -la
-          # script: 
-          #   sudo systemctl stop apache2
-          #   cd home
-          #   sudo mv * /var/www/html
-          #   sudo systemctl restart apache2
+          # - name: Run Command
+          script: 
+            sudo systemctl status apache2
+            sudo systemctl stop apache2
+            cd home
+            sudo mv * /var/www/html
+            sudo systemctl restart apache2
