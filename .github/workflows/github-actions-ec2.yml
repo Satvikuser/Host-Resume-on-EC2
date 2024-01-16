@@ -32,7 +32,6 @@ jobs:
           # - name: Run Command
           script: 
             sudo systemctl status apache2
-            sudo systemctl stop apache2
             cd home
             sudo mv * /var/www/html
             sudo systemctl restart apache2
