@@ -31,3 +31,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
           script: |
             sudo systemctl status apache2
+            cd /path/to/your/source/code  # Update this path to your source code location
+            sudo mv * /var/www/html
+            sudo systemctl restart apache2
