@@ -34,6 +34,7 @@ jobs:
          pwd
          ls -la
          cd /home
+         ls -la
           # script: 
           #   sudo systemctl stop apache2
           #   cd home
